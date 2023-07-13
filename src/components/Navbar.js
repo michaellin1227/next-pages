@@ -9,13 +9,14 @@ export default function Navbar() {
   const { auth, setAuth, logout } = useContext(AuthContext);
 
   const router = useRouter();
+
   const activeStyle = {
     color: "white",
     fontWeight: 800,
     backgroundColor: "blue",
     borderRadius: "10px",
   };
-  console.log(router);
+  // console.log(router);
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">

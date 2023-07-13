@@ -10,10 +10,13 @@ import ThemeContext from "@/contexts/ThemeContext";
 
 export default function Products() {
 
+  //引入ThemeContext的{ theme, setTheme }改變背景色
   const { theme, setTheme } = useContext(ThemeContext);
+
   const router = useRouter();
 
-  console.log(router);
+  // console.log(router);
+
   const [data, setData] = useState({
     redirect: "",
     totalRows: 0,
@@ -23,18 +26,19 @@ export default function Products() {
     rows: [],
   });
 
-  console.log("router.query:", router.query);
+  // console.log("router.query:", router.query);
   const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
 
     setKeyword(router.query.keyword || '');
     const usp = new URLSearchParams(router.query);
+    console.log(usp.toString())
 
     fetch(`${process.env.API_SERVER}/products?${usp.toString()}`)
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, [router.query]);

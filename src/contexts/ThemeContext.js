@@ -17,6 +17,7 @@ export const themes = {
 const ThemeContext = createContext({});
 export default ThemeContext;
 
+
 export const ThemeContextProvider = function ({children}) {
     const [theme, setTheme] = useState(themes.light)
   return (
