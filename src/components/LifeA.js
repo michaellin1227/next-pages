@@ -14,8 +14,14 @@ export default function LifeA() {
 
   useEffect(() => {
     console.log("已更新");
+    let n=1;
+    const interval_id = setInterval(()=>{
+      console.log(n++);
+    },1000)
+
     return ()=>{
         console.log("將要更新");
+        clearInterval(interval_id);
     }
   }, [val]);
 

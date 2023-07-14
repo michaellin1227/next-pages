@@ -49,9 +49,9 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/">
-                  Links
-                </a>
+                <Link className="nav-link" href="/life-cyc">
+                  LifeCyCle 1
+                </Link>
               </li>
 
               <li className="nav-item">

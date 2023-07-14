@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import { useState, useContext } from "react";
 import AuthContext from "@/contexts/AuthContext";
 import LifeA from "@/components/LifeA";
+import Debounce1 from "@/components/Debounce1";
+import Debounce2 from "@/components/Debounce2";
 
 
 export default function LifeCyCle() {
@@ -21,6 +23,14 @@ export default function LifeCyCle() {
             {show && <LifeA />}
             
           </div>
+          <div className="col-6">
+            {/* <Debounce1/> */}
+          </div>
+          
+          <div className="col-6">
+            <Debounce2 />
+          </div>
+        
         </div>
       </div>
     </>
